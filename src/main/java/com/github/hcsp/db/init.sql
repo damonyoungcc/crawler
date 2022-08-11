@@ -21,3 +21,6 @@ create table news
     modified_at timestamp,
     PRIMARY KEY (id)
 );
+
+insert into LINKS_TO_BE_PROCESSED(LINK)
+VALUES ('https://sina.cn');
