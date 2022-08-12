@@ -13,14 +13,11 @@ create table links_already_processed
 -- 创建students表
 create table news
 (
-    id          BIGINT NOT NULL AUTO_INCREMENT,
+    id          BIGINT PRIMARY KEY AUTO_INCREMENT,
     title       TEXT,
     content     TEXT,
     url         VARCHAR(2000),
     created_at  timestamp,
-    modified_at timestamp,
-    PRIMARY KEY (id)
+    modified_at timestamp
 );
 
-insert into LINKS_TO_BE_PROCESSED(LINK)
-VALUES ('https://sina.cn');
