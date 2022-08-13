@@ -53,6 +53,11 @@
     </profiles>
     <dependencies>
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.17</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.9</version>
@@ -131,7 +136,7 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <configuration>
-                    <url>jdbc:h2:file:/Volumes/MacOS/code/project/java/crawler/src/main/java/com/github/hcsp/db/news
+                    <url>jdbc:mysql://localhost:3306/crawler?characterEncoding=utf-8
                     </url>
                     <user>root</user>
                     <password>root</password>
