@@ -7,9 +7,9 @@
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="org.h2.Driver"/>
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
                 <property name="url"
-                          value="jdbc:h2:file:/Volumes/MacOS/code/project/java/crawler/src/main/java/com/github/hcsp/db/news"/>
+                          value="jdbc:mysql://localhost:3306/crawler?characterEncoding=utf-8"/>
                 <property name="username" value="root"/>
                 <property name="password" value="root"/>
             </dataSource>

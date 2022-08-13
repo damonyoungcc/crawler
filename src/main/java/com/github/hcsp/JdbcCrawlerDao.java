@@ -91,7 +91,8 @@ public class JdbcCrawlerDao implements CrawlerDao {
     }
 
     @Override
-    public void insertToBeProcessed(String href) {
+    public void insertLinkToBeProcessed(String href) {
 
     }
+
 }

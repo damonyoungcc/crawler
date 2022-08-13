@@ -1,2 +1,1 @@
-insert into LINKS_TO_BE_PROCESSED(LINK)
-values ('https://sina.cn')
+insert into LINKS_TO_BE_PROCESSED(LINK) values ('https://news.sina.cn/gn/2022-08-01');

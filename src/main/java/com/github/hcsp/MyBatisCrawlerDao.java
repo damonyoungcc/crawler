@@ -12,7 +12,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MyBatisCrawlerDao implements CrawlerDao {
-
     private SqlSessionFactory sqlSessionFactory;
 
     public MyBatisCrawlerDao() {
@@ -25,9 +24,8 @@ public class MyBatisCrawlerDao implements CrawlerDao {
         }
     }
 
-
     @Override
-    public String getNextLinkThenDelete() throws SQLException {
+    public synchronized String getNextLinkThenDelete() throws SQLException {
         try (SqlSession session = sqlSessionFactory.openSession(true)) {
             String url = session.selectOne("com.github.hcsp.MyMapper.selectNextAvailableLink");
             if (url != null) {
@@ -63,7 +61,7 @@ public class MyBatisCrawlerDao implements CrawlerDao {
     }
 
     @Override
-    public void insertToBeProcessed(String link) {
+    public void insertLinkToBeProcessed(String link) {
         Map<String, Object> param = new HashMap<>();
         param.put("tableName", "links_to_be_processed");
         param.put("link", link);
